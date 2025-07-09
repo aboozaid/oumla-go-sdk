@@ -21,6 +21,7 @@ type Sdk struct {
 	Profiles	*Profile
 	Wallets *Wallet
 	Addresses	*Address
+	Organizations	*Organization
 }
 
 const (
@@ -54,6 +55,9 @@ func NewOumla(config Config) Sdk {
 			client: client,
 		},
 		Addresses: &Address{
+			client: client,
+		},
+		Organizations: &Organization{
 			client: client,
 		},
 	}
